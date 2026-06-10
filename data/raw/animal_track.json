@@ -1,0 +1,3527 @@
+{
+  "_index": "es-indexer-edge",
+  "_id": "06b09398-d3d0-47dc-a54a-a745319fbece",
+  "_version": 2,
+  "_seq_no": 587,
+  "_primary_term": 1,
+  "found": true,
+  "_source": {
+    "title": "IMOS - Animal Tracking Facility - Satellite Relay Tagging Program - Delayed mode data",
+    "description": """The Animal Tracking Facility (formerly known as the Australian Animal Tracking And Monitoring System (AATAMS)) is a coordinated marine animal tagging project. Satellite Relay Data Loggers (SRDL) (most with CTDs, and some also with fluorometers) are used to explore how marine mammal behaviour relates to their oceanic environment. Loggers developed at the University of St Andrews Sea Mammal Research Unit transmit data in near real time via the Argo satellite system. The Satellite Relay Data Loggers are deployed on marine mammals, including Elephant Seals, Weddell Seals, Australian Fur Seals, Australian Sea Lions, New Zealand Fur Seals. Data is being collected in the Southern Ocean, the Great Australian Bight, and off the South-East Coast of Australia. 
+This metadata record, represents several different datasets listed hereafter, which can all be accessed through a multi-WFS service. The data represented by this record are presented in delayed mode. 
+CTD - parameters measured by the instruments include time, conductivity (salinity), temperature, speed, fluorescence (available in the future) and depth. 
+Diving - parameters measured by the instruments include start and end time and longitude/latitude of each individual dive, post-dive surface duration, dive duration, maximum dive depth, intermediate dive depths and times. 
+Haulout - a haulout begins when the SRDL has been continuously dry for a specified length of time (usually 10 minutes). It ends when continuously wet for another interval (usually 40 seconds). Haulout data parameters measured by the instruments include haulout start and end dates and longitude/latitude, and haulout number. 
+Argos locations - location data parameters measured by the instruments include time, longitude, latitude, location quality, along with other diagnostic information provided by Argos (http: //www.argos-system.org/). 
+Summary Statistics - as well as sending records of individual events such as dives and haulouts, the SRDL also calculates summary statistics of those events over a specified time period (usually 3,
+    4 or 6 hours). Summary statistics computed by the instruments include the proportion of time spent diving, at the surface and hauled-out, the number of dives, and the average, standard deviation and maximum dive duration and dive depth during each summary period. These statistics are based on all the data recorded by the SRDL and so are not prone to distortion by variations in the efficiency of transmission via Argos.
+
+** For data after October 2018, please consult IMOS - Animal Tracking Facility - Satellite Relay Tagging Program - Delayed mode data with quality-controlled locations (https: //catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/70f148b1-7040-4fad-944a-456413c95472), to access data with improved satellite locations. In the near future all historical delayed mode data will be reprocessed with the new quality control (QC) process, to improve the accuracy of the satellite location data, and this dataset will be replaced by the new QC'd one. **""",
+    "extent": {
+      "bbox": [
+        [
+          -180,
+          -80,
+          180,
+          -32
+        ],
+        [
+          118,
+          -36,
+          126,
+          -32
+        ],
+        [
+          130,
+          -38,
+          140,
+          -32
+        ],
+        [
+          140,
+          -42,
+          160,
+          -32
+        ],
+        [
+          -180,
+          -50,
+          -174,
+          -44
+        ],
+        [
+          -180,
+          -74,
+          -136,
+          -50
+        ],
+        [
+          -36,
+          -76,
+          -26,
+          -74
+        ],
+        [
+          -10,
+          -80,
+          180,
+          -38
+        ],
+        [
+          -180,
+          -80,
+          -172,
+          -74
+        ]
+      ],
+      "temporal": [
+        [
+          "2007-03-26T06:00:00Z",
+          "2019-11-30T12:59:59Z"
+        ],
+        [
+          "2007-03-26T06:00:00Z",
+          "2019-11-30T12:59:59Z"
+        ]
+      ]
+    },
+    "summaries": {
+      "score": 106,
+      "status": "completed",
+      "credits": [
+        "Australia's Integrated Marine Observing System (IMOS) is enabled by the National Collaborative Research Infrastructure Strategy (NCRIS). It is operated by a consortium of institutions as an unincorporated joint venture, with the University of Tasmania as Lead Agent.",
+        "Sydney Institute of Marine Science (SIMS)"
+      ],
+      "scope": {
+        "code": "dataset",
+        "name": "IMOS dataset level record"
+      },
+      "statement": "The Animal Tracking Facility Satellite Relay Tag data has been supplied to IMOS by participants, via the St Andrews University Sea Mammal Research Unit. Tags used on species: Australian Fur Seal, Australian Sea Lion, New Zealand Fur Seal and Southern Elephant Seal - CTD Satellite Relay Data Loggers (SRDL). Collect conductivity, temperature and depth information. On some Australian Sea Lions - CTD/Fluorometer Satellite Relay Data Loggers (SRDL). Collects conductivity, temperature, fluorescence and depth information. Weddell Seals - Satellite Relay Data Loggers (SRDL). Collect temperature, speed and depth information. CTD-SRDLs The CTD–Satellite Relay Data Loggers (CTD-SRDLs) are built by the Sea Mammal Research Unit (SMRU, University of St. Andrews, UK), incorporating CTD sensors developed by Valeport Ltd (Devon, UK). The sensor head consists of a pressure transducer, a platinum resistance thermometer, and an inductive cell for measuring conductivity. The temperature and conductivity sensors have a precision (repeatability) of 0.005°C and 0.005 mS/cm, respectively. Before being taken into the field, devices are calibrated in the laboratory by Valeport. Some of the CTD-SRDLs (about half) were also tested at sea against a ship-based CTD before the deployment. CTD-SRDLs record hydrographic profiles during the ascent of seals, retaining only the deepest dive in each six-hour time interval, and transmitting profiles in a compressed form (between 10 and 25 data points per profile, depending on the tag program) through the Advanced Research and Global Observation Satellite (ARGOS) system. The accuracy of ARGOS geo-positioning is typically better than ±5 km, because seals never stay at the surface more than a few minutes. New methods are currently under development by the ARGOS team, which should substantially improve the quality of positioning. Hydrographic profiles are post-processed using a unified procedure of editing, adjustment, and validation. A standard set of tests, adapted from Argo standard quality-control procedures, is first run to remove bad profiles, spikes, and outliers. For CTD-SRDLs with profiles in frozen areas, a temperature offset was estimated using the local freezing temperature. A salinity adjustment was also estimated, consisting in a pressure dependent linear correction. This bias is mainly induced by an external field effect on the conductivity sensor, which cannot be corrected a priori because it depends on how the tag has been attached on the seal's head. Adjustments parameters were estimated for each CTD-SRDLs separately by comparisons of salinity measurements with available data in the World Ocean Database. Because the southern ACC region (south of 55ºS) is associated with a large-scale upwelling of circumpolar deep waters near the surface, the salinity at depth is very stable there, with a low natural variability highly suitable for use as a reference. Salinity data cross-comparisons between different CTD-SRDLs were also used to estimate suitable adjustments for CTD-SRDLs having no profiles available in the southern ACC region. Once calibrated, the accuracy of post-processed CTD-SRDL measurements was estimated to be ±0.03oC in temperature and ±0.05 psu (practical salinity unit) or better in salinity for CTD-SRDLs built after 2007. The achieved accuracy is highly dependent upon availability of ship-based CTD comparisons, and the type of water masses sampled during the deployment time. In best cases, an accuracy of ±0.01 ºC and ±0.02 psu can be obtained. Pre-2007 CTD-SRDLs (about 5% of profiles) used an older technology with a poorer accuracy roughly estimated around ±0.1 ºC and ±0.1 psu.",
+      "creation": "2020-07-10T14:31:24",
+      "revision": "2024-12-19T05:24:25",
+      "ai:description": """The Animal Tracking Facility (formerly known as the Australian Animal Tracking And Monitoring System (AATAMS)) is a coordinated marine animal tagging project. Satellite Relay Data Loggers (SRDL) (most with CTDs, and some also with fluorometers) are used to explore how marine mammal behaviour relates to their oceanic environment. Loggers developed at the University of St Andrews Sea Mammal Research Unit transmit data in near real time via the Argo satellite system. The Satellite Relay Data Loggers are deployed on marine mammals, including Elephant Seals, Weddell Seals, Australian Fur Seals, Australian Sea Lions, New Zealand Fur Seals. Data is being collected in the Southern Ocean, the Great Australian Bight, and off the South-East Coast of Australia.
+
+This metadata record, represents several different datasets listed hereafter, which can all be accessed through a multi-WFS service. The data represented by this record are presented in delayed mode.
+
+CTD - parameters measured by the instruments include time, conductivity (salinity), temperature, speed, fluorescence (available in the future) and depth.
+
+Diving - parameters measured by the instruments include start and end time and longitude/latitude of each individual dive, post-dive surface duration, dive duration, maximum dive depth, intermediate dive depths and times.
+
+Haulout - a haulout begins when the SRDL has been continuously dry for a specified length of time (usually 10 minutes). It ends when continuously wet for another interval (usually 40 seconds). Haulout data parameters measured by the instruments include haulout start and end dates and longitude/latitude, and haulout number.
+
+Argos locations - location data parameters measured by the instruments include time, longitude, latitude, location quality, along with other diagnostic information provided by Argos (http: //www.argos-system.org/).
+
+Summary Statistics - as well as sending records of individual events such as dives and haulouts, the SRDL also calculates summary statistics of those events over a specified time period (usually 3,
+      4 or 6 hours). Summary statistics computed by the instruments include the proportion of time spent diving, at the surface and hauled-out, the number of dives, and the average, standard deviation and maximum dive duration and dive depth during each summary period. These statistics are based on all the data recorded by the SRDL and so are not prone to distortion by variations in the efficiency of transmission via Argos.
+
+
+
+- For data after October 2018, please consult IMOS - Animal Tracking Facility - Satellite Relay Tagging Program - Delayed mode data with quality-controlled locations (https: //catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/70f148b1-7040-4fad-944a-456413c95472), to access data with improved satellite locations.
+
+- In the near future all historical delayed mode data will be reprocessed with the new quality control (QC) process, to improve the accuracy of the satellite location data, and this dataset will be replaced by the new QC'd one.""","dataset_group": "imos",
+      "dataset_provider": "IMOS",
+      "update_frequency": "completed",
+      "proj:geometry": {
+        "geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  118.00000000000001,
+                  -35.999999999999986
+                ],
+                [
+                  123.99999999999999,
+                  -35.999999999999986
+                ],
+                [
+                  123.99999999999999,
+                  -34
+                ],
+                [
+                  126,
+                  -34
+                ],
+                [
+                  126,
+                  -32
+                ],
+                [
+                  122,
+                  -32
+                ],
+                [
+                  122,
+                  -34
+                ],
+                [
+                  118.00000000000001,
+                  -34
+                ],
+                [
+                  118.00000000000001,
+                  -35.999999999999986
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  134,
+                  -37.99999999999999
+                ],
+                [
+                  140,
+                  -37.99999999999999
+                ],
+                [
+                  140,
+                  -34
+                ],
+                [
+                  136,
+                  -34
+                ],
+                [
+                  136,
+                  -32
+                ],
+                [
+                  130,
+                  -32
+                ],
+                [
+                  130,
+                  -34
+                ],
+                [
+                  132,
+                  -34
+                ],
+                [
+                  132,
+                  -35.999999999999986
+                ],
+                [
+                  134,
+                  -35.999999999999986
+                ],
+                [
+                  134,
+                  -37.99999999999999
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  150,
+                  -42.00000000000001
+                ],
+                [
+                  160,
+                  -42.00000000000001
+                ],
+                [
+                  160,
+                  -37.99999999999999
+                ],
+                [
+                  156,
+                  -37.99999999999999
+                ],
+                [
+                  156,
+                  -32
+                ],
+                [
+                  150,
+                  -32
+                ],
+                [
+                  150,
+                  -35.999999999999986
+                ],
+                [
+                  148,
+                  -35.999999999999986
+                ],
+                [
+                  148,
+                  -37.99999999999999
+                ],
+                [
+                  140,
+                  -37.99999999999999
+                ],
+                [
+                  140,
+                  -40
+                ],
+                [
+                  150,
+                  -40
+                ],
+                [
+                  150,
+                  -42.00000000000001
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -180,
+                  -50
+                ],
+                [
+                  -178,
+                  -50
+                ],
+                [
+                  -178,
+                  -48
+                ],
+                [
+                  -176,
+                  -48
+                ],
+                [
+                  -176,
+                  -46.00000000000001
+                ],
+                [
+                  -174,
+                  -46.00000000000001
+                ],
+                [
+                  -174,
+                  -44
+                ],
+                [
+                  -180,
+                  -44
+                ],
+                [
+                  -180,
+                  -50
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -166.00000000000003,
+                  -74
+                ],
+                [
+                  -160,
+                  -74
+                ],
+                [
+                  -160,
+                  -70
+                ],
+                [
+                  -154,
+                  -70
+                ],
+                [
+                  -154,
+                  -68
+                ],
+                [
+                  -148,
+                  -68
+                ],
+                [
+                  -148,
+                  -70
+                ],
+                [
+                  -150,
+                  -70
+                ],
+                [
+                  -150,
+                  -72
+                ],
+                [
+                  -146,
+                  -72
+                ],
+                [
+                  -146,
+                  -70
+                ],
+                [
+                  -140,
+                  -70
+                ],
+                [
+                  -140,
+                  -64
+                ],
+                [
+                  -136,
+                  -64
+                ],
+                [
+                  -136,
+                  -60.00000000000001
+                ],
+                [
+                  -138,
+                  -60.00000000000001
+                ],
+                [
+                  -138,
+                  -58
+                ],
+                [
+                  -144,
+                  -58
+                ],
+                [
+                  -144,
+                  -56
+                ],
+                [
+                  -146,
+                  -56
+                ],
+                [
+                  -146,
+                  -58
+                ],
+                [
+                  -152,
+                  -58
+                ],
+                [
+                  -152,
+                  -54
+                ],
+                [
+                  -148,
+                  -54
+                ],
+                [
+                  -148,
+                  -50
+                ],
+                [
+                  -152,
+                  -50
+                ],
+                [
+                  -152,
+                  -52
+                ],
+                [
+                  -154,
+                  -52
+                ],
+                [
+                  -154,
+                  -56
+                ],
+                [
+                  -156,
+                  -56
+                ],
+                [
+                  -156,
+                  -52
+                ],
+                [
+                  -160,
+                  -52
+                ],
+                [
+                  -160,
+                  -54
+                ],
+                [
+                  -180,
+                  -54
+                ],
+                [
+                  -180,
+                  -70
+                ],
+                [
+                  -166.00000000000003,
+                  -70
+                ],
+                [
+                  -166.00000000000003,
+                  -74
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -36,
+                  -76
+                ],
+                [
+                  -26.000000000000004,
+                  -76
+                ],
+                [
+                  -26.000000000000004,
+                  -74
+                ],
+                [
+                  -36,
+                  -74
+                ],
+                [
+                  -36,
+                  -76
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  164,
+                  -80
+                ],
+                [
+                  168,
+                  -80
+                ],
+                [
+                  168,
+                  -78
+                ],
+                [
+                  180,
+                  -78
+                ],
+                [
+                  180,
+                  -68
+                ],
+                [
+                  174,
+                  -68
+                ],
+                [
+                  174,
+                  -66
+                ],
+                [
+                  180,
+                  -66
+                ],
+                [
+                  180,
+                  -54
+                ],
+                [
+                  178,
+                  -54
+                ],
+                [
+                  178,
+                  -52
+                ],
+                [
+                  180,
+                  -52
+                ],
+                [
+                  180,
+                  -46.00000000000001
+                ],
+                [
+                  176,
+                  -46.00000000000001
+                ],
+                [
+                  176,
+                  -48
+                ],
+                [
+                  174,
+                  -48
+                ],
+                [
+                  174,
+                  -50
+                ],
+                [
+                  170,
+                  -50
+                ],
+                [
+                  170,
+                  -48
+                ],
+                [
+                  172,
+                  -48
+                ],
+                [
+                  172,
+                  -44
+                ],
+                [
+                  170,
+                  -44
+                ],
+                [
+                  170,
+                  -46.00000000000001
+                ],
+                [
+                  168,
+                  -46.00000000000001
+                ],
+                [
+                  168,
+                  -48
+                ],
+                [
+                  166.00000000000003,
+                  -48
+                ],
+                [
+                  166.00000000000003,
+                  -50
+                ],
+                [
+                  157.99999999999997,
+                  -50
+                ],
+                [
+                  157.99999999999997,
+                  -48
+                ],
+                [
+                  154,
+                  -48
+                ],
+                [
+                  154,
+                  -46.00000000000001
+                ],
+                [
+                  144,
+                  -46.00000000000001
+                ],
+                [
+                  144,
+                  -44
+                ],
+                [
+                  134,
+                  -44
+                ],
+                [
+                  134,
+                  -48
+                ],
+                [
+                  132,
+                  -48
+                ],
+                [
+                  132,
+                  -46.00000000000001
+                ],
+                [
+                  130,
+                  -46.00000000000001
+                ],
+                [
+                  130,
+                  -42.00000000000001
+                ],
+                [
+                  128,
+                  -42.00000000000001
+                ],
+                [
+                  128,
+                  -40
+                ],
+                [
+                  123.99999999999999,
+                  -40
+                ],
+                [
+                  123.99999999999999,
+                  -42.00000000000001
+                ],
+                [
+                  122,
+                  -42.00000000000001
+                ],
+                [
+                  122,
+                  -44
+                ],
+                [
+                  106,
+                  -44
+                ],
+                [
+                  106,
+                  -40
+                ],
+                [
+                  94.00000000000001,
+                  -40
+                ],
+                [
+                  94.00000000000001,
+                  -42.00000000000001
+                ],
+                [
+                  92.00000000000001,
+                  -42.00000000000001
+                ],
+                [
+                  92.00000000000001,
+                  -40
+                ],
+                [
+                  90,
+                  -40
+                ],
+                [
+                  90,
+                  -37.99999999999999
+                ],
+                [
+                  86,
+                  -37.99999999999999
+                ],
+                [
+                  86,
+                  -44
+                ],
+                [
+                  78,
+                  -44
+                ],
+                [
+                  78,
+                  -46.00000000000001
+                ],
+                [
+                  74,
+                  -46.00000000000001
+                ],
+                [
+                  74,
+                  -44
+                ],
+                [
+                  72,
+                  -44
+                ],
+                [
+                  72,
+                  -42.00000000000001
+                ],
+                [
+                  66,
+                  -42.00000000000001
+                ],
+                [
+                  66,
+                  -44
+                ],
+                [
+                  58,
+                  -44
+                ],
+                [
+                  58,
+                  -42.00000000000001
+                ],
+                [
+                  52.00000000000001,
+                  -42.00000000000001
+                ],
+                [
+                  52.00000000000001,
+                  -37.99999999999999
+                ],
+                [
+                  50,
+                  -37.99999999999999
+                ],
+                [
+                  50,
+                  -40
+                ],
+                [
+                  46.00000000000001,
+                  -40
+                ],
+                [
+                  46.00000000000001,
+                  -42.00000000000001
+                ],
+                [
+                  44,
+                  -42.00000000000001
+                ],
+                [
+                  44,
+                  -40
+                ],
+                [
+                  40,
+                  -40
+                ],
+                [
+                  40,
+                  -42.00000000000001
+                ],
+                [
+                  30,
+                  -42.00000000000001
+                ],
+                [
+                  30,
+                  -46.00000000000001
+                ],
+                [
+                  40,
+                  -46.00000000000001
+                ],
+                [
+                  40,
+                  -48
+                ],
+                [
+                  24,
+                  -48
+                ],
+                [
+                  24,
+                  -46.00000000000001
+                ],
+                [
+                  20,
+                  -46.00000000000001
+                ],
+                [
+                  20,
+                  -52
+                ],
+                [
+                  14.000000000000002,
+                  -52
+                ],
+                [
+                  14.000000000000002,
+                  -54
+                ],
+                [
+                  2,
+                  -54
+                ],
+                [
+                  2,
+                  -58
+                ],
+                [
+                  -10,
+                  -58
+                ],
+                [
+                  -10,
+                  -64
+                ],
+                [
+                  -2,
+                  -64
+                ],
+                [
+                  -2,
+                  -68
+                ],
+                [
+                  6,
+                  -68
+                ],
+                [
+                  6,
+                  -70
+                ],
+                [
+                  14.000000000000002,
+                  -70
+                ],
+                [
+                  14.000000000000002,
+                  -68
+                ],
+                [
+                  16,
+                  -68
+                ],
+                [
+                  16,
+                  -70
+                ],
+                [
+                  42,
+                  -70
+                ],
+                [
+                  42,
+                  -68
+                ],
+                [
+                  68,
+                  -68
+                ],
+                [
+                  68,
+                  -70
+                ],
+                [
+                  82,
+                  -70
+                ],
+                [
+                  82,
+                  -68
+                ],
+                [
+                  96,
+                  -68
+                ],
+                [
+                  96,
+                  -66
+                ],
+                [
+                  104.00000000000001,
+                  -66
+                ],
+                [
+                  104.00000000000001,
+                  -68
+                ],
+                [
+                  112.00000000000001,
+                  -68
+                ],
+                [
+                  112.00000000000001,
+                  -66
+                ],
+                [
+                  118.00000000000001,
+                  -66
+                ],
+                [
+                  118.00000000000001,
+                  -68
+                ],
+                [
+                  122,
+                  -68
+                ],
+                [
+                  122,
+                  -66
+                ],
+                [
+                  132,
+                  -66
+                ],
+                [
+                  132,
+                  -68
+                ],
+                [
+                  136,
+                  -68
+                ],
+                [
+                  136,
+                  -66
+                ],
+                [
+                  138,
+                  -66
+                ],
+                [
+                  138,
+                  -68
+                ],
+                [
+                  148,
+                  -68
+                ],
+                [
+                  148,
+                  -66
+                ],
+                [
+                  160,
+                  -66
+                ],
+                [
+                  160,
+                  -68
+                ],
+                [
+                  161.99999999999997,
+                  -68
+                ],
+                [
+                  161.99999999999997,
+                  -70
+                ],
+                [
+                  170,
+                  -70
+                ],
+                [
+                  170,
+                  -72
+                ],
+                [
+                  174,
+                  -72
+                ],
+                [
+                  174,
+                  -74
+                ],
+                [
+                  161.99999999999997,
+                  -74
+                ],
+                [
+                  161.99999999999997,
+                  -78
+                ],
+                [
+                  164,
+                  -78
+                ],
+                [
+                  164,
+                  -80
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -172,
+                  -78
+                ],
+                [
+                  -172,
+                  -76
+                ],
+                [
+                  -178,
+                  -76
+                ],
+                [
+                  -178,
+                  -74
+                ],
+                [
+                  -180,
+                  -74
+                ],
+                [
+                  -180,
+                  -78
+                ],
+                [
+                  -178,
+                  -78
+                ],
+                [
+                  -178,
+                  -80
+                ],
+                [
+                  -172,
+                  -80
+                ],
+                [
+                  -172,
+                  -78
+                ]
+              ]
+            ]
+          }
+        ],
+        "type": "GeometryCollection"
+      },
+      "proj:geometry_noland": {
+        "geometries": [
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  118,
+                  -35
+                ],
+                [
+                  118,
+                  -36
+                ],
+                [
+                  124,
+                  -36
+                ],
+                [
+                  124,
+                  -34
+                ],
+                [
+                  126,
+                  -34
+                ],
+                [
+                  126,
+                  -32.25
+                ],
+                [
+                  123.5,
+                  -34
+                ],
+                [
+                  122,
+                  -34
+                ],
+                [
+                  120,
+                  -34
+                ],
+                [
+                  118,
+                  -35
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  134,
+                  -36
+                ],
+                [
+                  134,
+                  -38
+                ],
+                [
+                  140,
+                  -38
+                ],
+                [
+                  140,
+                  -37
+                ],
+                [
+                  139.25,
+                  -35.5
+                ],
+                [
+                  138,
+                  -35.5
+                ],
+                [
+                  138,
+                  -34.25
+                ],
+                [
+                  137.75,
+                  -35.25
+                ],
+                [
+                  136.75,
+                  -35.25
+                ],
+                [
+                  137.75,
+                  -34
+                ],
+                [
+                  136.75,
+                  -34
+                ],
+                [
+                  136,
+                  -35
+                ],
+                [
+                  134.25,
+                  -32.5
+                ],
+                [
+                  132.75,
+                  -32
+                ],
+                [
+                  130,
+                  -32
+                ],
+                [
+                  130,
+                  -34
+                ],
+                [
+                  132,
+                  -34
+                ],
+                [
+                  132,
+                  -36
+                ],
+                [
+                  134,
+                  -36
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  150,
+                  -40
+                ],
+                [
+                  150,
+                  -42
+                ],
+                [
+                  160,
+                  -42
+                ],
+                [
+                  160,
+                  -38
+                ],
+                [
+                  156,
+                  -38
+                ],
+                [
+                  156,
+                  -32
+                ],
+                [
+                  152.5,
+                  -32
+                ],
+                [
+                  151.25,
+                  -33.5
+                ],
+                [
+                  150,
+                  -37.5
+                ],
+                [
+                  146.5,
+                  -39.25
+                ],
+                [
+                  144.75,
+                  -38.25
+                ],
+                [
+                  144.75,
+                  -38
+                ],
+                [
+                  143.5,
+                  -38.75
+                ],
+                [
+                  140.5,
+                  -38
+                ],
+                [
+                  140,
+                  -38
+                ],
+                [
+                  140,
+                  -40
+                ],
+                [
+                  150,
+                  -40
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -180,
+                  -44
+                ],
+                [
+                  -180,
+                  -50
+                ],
+                [
+                  -178,
+                  -50
+                ],
+                [
+                  -178,
+                  -48
+                ],
+                [
+                  -176,
+                  -48
+                ],
+                [
+                  -176,
+                  -46
+                ],
+                [
+                  -174,
+                  -46
+                ],
+                [
+                  -174,
+                  -44
+                ],
+                [
+                  -180,
+                  -44
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -166,
+                  -70
+                ],
+                [
+                  -166,
+                  -74
+                ],
+                [
+                  -160,
+                  -74
+                ],
+                [
+                  -160,
+                  -70
+                ],
+                [
+                  -154,
+                  -70
+                ],
+                [
+                  -154,
+                  -68
+                ],
+                [
+                  -148,
+                  -68
+                ],
+                [
+                  -148,
+                  -70
+                ],
+                [
+                  -150,
+                  -70
+                ],
+                [
+                  -150,
+                  -72
+                ],
+                [
+                  -146,
+                  -72
+                ],
+                [
+                  -146,
+                  -70
+                ],
+                [
+                  -140,
+                  -70
+                ],
+                [
+                  -140,
+                  -64
+                ],
+                [
+                  -136,
+                  -64
+                ],
+                [
+                  -136,
+                  -60
+                ],
+                [
+                  -138,
+                  -60
+                ],
+                [
+                  -138,
+                  -58
+                ],
+                [
+                  -144,
+                  -58
+                ],
+                [
+                  -144,
+                  -56
+                ],
+                [
+                  -146,
+                  -56
+                ],
+                [
+                  -146,
+                  -58
+                ],
+                [
+                  -152,
+                  -58
+                ],
+                [
+                  -152,
+                  -54
+                ],
+                [
+                  -148,
+                  -54
+                ],
+                [
+                  -148,
+                  -50
+                ],
+                [
+                  -152,
+                  -50
+                ],
+                [
+                  -152,
+                  -52
+                ],
+                [
+                  -154,
+                  -52
+                ],
+                [
+                  -154,
+                  -56
+                ],
+                [
+                  -156,
+                  -56
+                ],
+                [
+                  -156,
+                  -52
+                ],
+                [
+                  -160,
+                  -52
+                ],
+                [
+                  -160,
+                  -54
+                ],
+                [
+                  -180,
+                  -54
+                ],
+                [
+                  -180,
+                  -70
+                ],
+                [
+                  -166,
+                  -70
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -36,
+                  -74
+                ],
+                [
+                  -36,
+                  -76
+                ],
+                [
+                  -26,
+                  -76
+                ],
+                [
+                  -26,
+                  -74
+                ],
+                [
+                  -36,
+                  -74
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  164,
+                  -78.5
+                ],
+                [
+                  164,
+                  -80
+                ],
+                [
+                  168,
+                  -80
+                ],
+                [
+                  168,
+                  -78
+                ],
+                [
+                  180,
+                  -78
+                ],
+                [
+                  180,
+                  -68
+                ],
+                [
+                  174,
+                  -68
+                ],
+                [
+                  174,
+                  -66
+                ],
+                [
+                  180,
+                  -66
+                ],
+                [
+                  180,
+                  -54
+                ],
+                [
+                  178,
+                  -54
+                ],
+                [
+                  178,
+                  -52
+                ],
+                [
+                  180,
+                  -52
+                ],
+                [
+                  180,
+                  -46
+                ],
+                [
+                  176,
+                  -46
+                ],
+                [
+                  176,
+                  -48
+                ],
+                [
+                  174,
+                  -48
+                ],
+                [
+                  174,
+                  -50
+                ],
+                [
+                  170,
+                  -50
+                ],
+                [
+                  170,
+                  -48
+                ],
+                [
+                  172,
+                  -48
+                ],
+                [
+                  172,
+                  -44
+                ],
+                [
+                  171.25,
+                  -44.25
+                ],
+                [
+                  169.75,
+                  -46.5
+                ],
+                [
+                  168,
+                  -46.25
+                ],
+                [
+                  168,
+                  -48
+                ],
+                [
+                  166,
+                  -48
+                ],
+                [
+                  166,
+                  -50
+                ],
+                [
+                  158,
+                  -50
+                ],
+                [
+                  158,
+                  -48
+                ],
+                [
+                  154,
+                  -48
+                ],
+                [
+                  154,
+                  -46
+                ],
+                [
+                  144,
+                  -46
+                ],
+                [
+                  144,
+                  -44
+                ],
+                [
+                  134,
+                  -44
+                ],
+                [
+                  134,
+                  -48
+                ],
+                [
+                  132,
+                  -48
+                ],
+                [
+                  132,
+                  -46
+                ],
+                [
+                  130,
+                  -46
+                ],
+                [
+                  130,
+                  -42
+                ],
+                [
+                  128,
+                  -42
+                ],
+                [
+                  128,
+                  -40
+                ],
+                [
+                  124,
+                  -40
+                ],
+                [
+                  124,
+                  -42
+                ],
+                [
+                  122,
+                  -42
+                ],
+                [
+                  122,
+                  -44
+                ],
+                [
+                  106,
+                  -44
+                ],
+                [
+                  106,
+                  -40
+                ],
+                [
+                  94,
+                  -40
+                ],
+                [
+                  94,
+                  -42
+                ],
+                [
+                  92,
+                  -42
+                ],
+                [
+                  92,
+                  -40
+                ],
+                [
+                  90,
+                  -40
+                ],
+                [
+                  90,
+                  -38
+                ],
+                [
+                  86,
+                  -38
+                ],
+                [
+                  86,
+                  -44
+                ],
+                [
+                  78,
+                  -44
+                ],
+                [
+                  78,
+                  -46
+                ],
+                [
+                  74,
+                  -46
+                ],
+                [
+                  74,
+                  -44
+                ],
+                [
+                  72,
+                  -44
+                ],
+                [
+                  72,
+                  -42
+                ],
+                [
+                  66,
+                  -42
+                ],
+                [
+                  66,
+                  -44
+                ],
+                [
+                  58,
+                  -44
+                ],
+                [
+                  58,
+                  -42
+                ],
+                [
+                  52,
+                  -42
+                ],
+                [
+                  52,
+                  -38
+                ],
+                [
+                  50,
+                  -38
+                ],
+                [
+                  50,
+                  -40
+                ],
+                [
+                  46,
+                  -40
+                ],
+                [
+                  46,
+                  -42
+                ],
+                [
+                  44,
+                  -42
+                ],
+                [
+                  44,
+                  -40
+                ],
+                [
+                  40,
+                  -40
+                ],
+                [
+                  40,
+                  -42
+                ],
+                [
+                  30,
+                  -42
+                ],
+                [
+                  30,
+                  -46
+                ],
+                [
+                  40,
+                  -46
+                ],
+                [
+                  40,
+                  -48
+                ],
+                [
+                  24,
+                  -48
+                ],
+                [
+                  24,
+                  -46
+                ],
+                [
+                  20,
+                  -46
+                ],
+                [
+                  20,
+                  -52
+                ],
+                [
+                  14,
+                  -52
+                ],
+                [
+                  14,
+                  -54
+                ],
+                [
+                  2,
+                  -54
+                ],
+                [
+                  2,
+                  -58
+                ],
+                [
+                  -10,
+                  -58
+                ],
+                [
+                  -10,
+                  -64
+                ],
+                [
+                  -2,
+                  -64
+                ],
+                [
+                  -2,
+                  -68
+                ],
+                [
+                  6,
+                  -68
+                ],
+                [
+                  6,
+                  -70
+                ],
+                [
+                  9.25,
+                  -70
+                ],
+                [
+                  13,
+                  -70
+                ],
+                [
+                  14,
+                  -70
+                ],
+                [
+                  14,
+                  -68
+                ],
+                [
+                  16,
+                  -68
+                ],
+                [
+                  16,
+                  -70
+                ],
+                [
+                  32.75,
+                  -70
+                ],
+                [
+                  32.5,
+                  -69
+                ],
+                [
+                  33.25,
+                  -68.75
+                ],
+                [
+                  35.25,
+                  -69.75
+                ],
+                [
+                  37.25,
+                  -70
+                ],
+                [
+                  39.25,
+                  -70
+                ],
+                [
+                  39.75,
+                  -68.75
+                ],
+                [
+                  42,
+                  -68.25
+                ],
+                [
+                  42,
+                  -68
+                ],
+                [
+                  43.25,
+                  -68
+                ],
+                [
+                  46.5,
+                  -67.25
+                ],
+                [
+                  48.5,
+                  -68
+                ],
+                [
+                  49.5,
+                  -67.25
+                ],
+                [
+                  48.25,
+                  -67
+                ],
+                [
+                  51,
+                  -67.25
+                ],
+                [
+                  50.25,
+                  -66.5
+                ],
+                [
+                  53.75,
+                  -65.75
+                ],
+                [
+                  57.25,
+                  -66.5
+                ],
+                [
+                  56,
+                  -66.5
+                ],
+                [
+                  56.75,
+                  -67
+                ],
+                [
+                  56.25,
+                  -67.5
+                ],
+                [
+                  69.75,
+                  -67.75
+                ],
+                [
+                  69.75,
+                  -69.25
+                ],
+                [
+                  68,
+                  -70
+                ],
+                [
+                  73.25,
+                  -70
+                ],
+                [
+                  73.5,
+                  -69.75
+                ],
+                [
+                  75.5,
+                  -70
+                ],
+                [
+                  79.25,
+                  -68.25
+                ],
+                [
+                  88,
+                  -66.75
+                ],
+                [
+                  96,
+                  -67
+                ],
+                [
+                  96,
+                  -66
+                ],
+                [
+                  102,
+                  -66
+                ],
+                [
+                  102.75,
+                  -65.75
+                ],
+                [
+                  104,
+                  -66
+                ],
+                [
+                  108.75,
+                  -67
+                ],
+                [
+                  112,
+                  -66
+                ],
+                [
+                  112.25,
+                  -66
+                ],
+                [
+                  113.25,
+                  -65.75
+                ],
+                [
+                  114,
+                  -66
+                ],
+                [
+                  118,
+                  -66
+                ],
+                [
+                  118,
+                  -67
+                ],
+                [
+                  122,
+                  -66.75
+                ],
+                [
+                  122,
+                  -66
+                ],
+                [
+                  132,
+                  -66
+                ],
+                [
+                  133.25,
+                  -66
+                ],
+                [
+                  136,
+                  -66.25
+                ],
+                [
+                  136,
+                  -66
+                ],
+                [
+                  138,
+                  -66
+                ],
+                [
+                  138,
+                  -66.25
+                ],
+                [
+                  143.5,
+                  -66.75
+                ],
+                [
+                  144.75,
+                  -67
+                ],
+                [
+                  144,
+                  -68
+                ],
+                [
+                  146,
+                  -67.5
+                ],
+                [
+                  146.5,
+                  -68
+                ],
+                [
+                  148,
+                  -68
+                ],
+                [
+                  148,
+                  -66
+                ],
+                [
+                  160,
+                  -66
+                ],
+                [
+                  160,
+                  -68
+                ],
+                [
+                  162,
+                  -68
+                ],
+                [
+                  162,
+                  -70
+                ],
+                [
+                  170,
+                  -70
+                ],
+                [
+                  170,
+                  -71.25
+                ],
+                [
+                  170.25,
+                  -71.25
+                ],
+                [
+                  171,
+                  -71.75
+                ],
+                [
+                  170.5,
+                  -72
+                ],
+                [
+                  174,
+                  -72
+                ],
+                [
+                  174,
+                  -74
+                ],
+                [
+                  165.75,
+                  -74
+                ],
+                [
+                  165,
+                  -74
+                ],
+                [
+                  165.5,
+                  -74.75
+                ],
+                [
+                  163.5,
+                  -74.25
+                ],
+                [
+                  162.5,
+                  -75.25
+                ],
+                [
+                  162,
+                  -75.25
+                ],
+                [
+                  162,
+                  -75.75
+                ],
+                [
+                  163,
+                  -75.75
+                ],
+                [
+                  162,
+                  -76.25
+                ],
+                [
+                  163,
+                  -76.5
+                ],
+                [
+                  162.25,
+                  -77
+                ],
+                [
+                  164.5,
+                  -78
+                ],
+                [
+                  164,
+                  -78.25
+                ],
+                [
+                  167.25,
+                  -78.75
+                ],
+                [
+                  164,
+                  -78.5
+                ]
+              ],
+              [
+                [
+                  70.5,
+                  -49.25
+                ],
+                [
+                  68.75,
+                  -49.75
+                ],
+                [
+                  69,
+                  -48.75
+                ],
+                [
+                  70.5,
+                  -49.25
+                ]
+              ]
+            ]
+          },
+          {
+            "type": "Polygon",
+            "coordinates": [
+              [
+                [
+                  -172,
+                  -80
+                ],
+                [
+                  -172,
+                  -78
+                ],
+                [
+                  -172,
+                  -76
+                ],
+                [
+                  -178,
+                  -76
+                ],
+                [
+                  -178,
+                  -74
+                ],
+                [
+                  -180,
+                  -74
+                ],
+                [
+                  -180,
+                  -78
+                ],
+                [
+                  -178,
+                  -78
+                ],
+                [
+                  -178,
+                  -80
+                ],
+                [
+                  -172,
+                  -80
+                ]
+              ]
+            ]
+          }
+        ],
+        "type": "GeometryCollection"
+      },
+      "temporal": [
+        {
+          "start": "2007-03-26T06:00:00Z",
+          "end": "2019-11-30T12:59:59Z"
+        }
+      ],
+      "parameter_vocabs": [
+        "salinity",
+        "temperature",
+        "water pressure"
+      ],
+      "platform_vocabs": [
+        "Biological platform",
+        "land-sea mammals"
+      ],
+      "organisation_vocabs": [
+        "Animal Tagging Sub-Facility, Integrated Marine Observing System (IMOS)"
+      ]
+    },
+    "contacts": [
+      {
+        "roles": [
+          "principalInvestigator",
+          "about"
+        ],
+        "organization": "School of Natural Sciences, Macquarie University",
+        "name": "Harcourt, Rob",
+        "position": "Animal Tracking Facility Leader",
+        "emails": [
+          "robert.harcourt@mq.edu.au"
+        ],
+        "addresses": [
+          {
+            "deliveryPoint": [
+              "Marine Predator Research Group, School of Natural Sciences",
+              "Macquarie University"
+            ],
+            "city": "North Ryde",
+            "country": "Australia",
+            "postalCode": "2109",
+            "administrativeArea": "New South Wales"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://researchers.mq.edu.au/en/persons/robert-harcourt",
+            "type": "WWW:LINK-1.0-http--link",
+            "title": "Maquarie University staff profile for Rob Harcourt"
+          }
+        ]
+      },
+      {
+        "roles": [
+          "distributor",
+          "metadata"
+        ],
+        "organization": "Integrated Marine Observing System (IMOS)",
+        "position": "Data Officer",
+        "emails": [
+          "info@aodn.org.au"
+        ],
+        "addresses": [
+          {
+            "deliveryPoint": [
+              "University of Tasmania",
+              "Private Bag 110"
+            ],
+            "city": "Hobart",
+            "country": "Australia",
+            "postalCode": "7001",
+            "administrativeArea": "Tasmania"
+          }
+        ],
+        "phones": [
+          {
+            "roles": [
+              "voice"
+            ],
+            "value": "61 3 6226 7488"
+          },
+          {
+            "roles": [
+              "facsimile"
+            ],
+            "value": "61 3 6226 2107"
+          }
+        ],
+        "links": [
+          {
+            "href": "http://imos.org.au/aodn.html",
+            "type": "WWW:LINK-1.0-http--link",
+            "title": "Website of the Australian Ocean Data Network (AODN)"
+          }
+        ]
+      },
+      {
+        "roles": [
+          "resourceProvider",
+          "citation"
+        ],
+        "organization": "Integrated Marine Observing System (IMOS)",
+        "emails": [
+          "imos@imos.org.au"
+        ],
+        "addresses": [
+          {
+            "deliveryPoint": [
+              "Private Bag 110"
+            ],
+            "city": "Hobart",
+            "country": "Australia",
+            "postalCode": "7001",
+            "administrativeArea": "Tasmania"
+          }
+        ],
+        "phones": [
+          {
+            "roles": [
+              "voice"
+            ],
+            "value": "61 3 6226 7549"
+          },
+          {
+            "roles": [
+              "facsimile"
+            ],
+            "value": "61 3 6226 2107"
+          }
+        ],
+        "links": [
+          {
+            "href": "http://www.imos.org.au/html",
+            "type": "WWW:LINK-1.0-http--link",
+            "title": "Website for the Integrated Marine Observing System"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "code": "eng",
+        "name": "English"
+      }
+    ],
+    "links": [
+      {
+        "href": "http://imos.org.au/animaltracking.html",
+        "rel": "related",
+        "type": "text/html",
+        "title": """{"title":"Animal Tracking Facility page on IMOS website","description":""}""",
+        "ai:group": "Other"
+      },
+      {
+        "href": "https://portal.aodn.org.au/search?uuid=06b09398-d3d0-47dc-a54a-a745319fbece",
+        "rel": "related",
+        "type": "text/html",
+        "title": """{"title":"View and download data though the AODN Portal","description":""}""",
+        "ai:group": "Data Access"
+      },
+      {
+        "href": "http://oceancurrent.imos.org.au/aatams.php",
+        "rel": "data",
+        "type": "",
+        "title": """{"title":"View profile plots from Oceancurrent SealCTDs page","description":""}""",
+        "ai:group": "Data Access"
+      },
+      {
+        "href": "http://geoserver-123.aodn.org.au/geoserver/wms",
+        "rel": "wms",
+        "type": "",
+        "title": """{"title":"imos:aatams_sattag_dm_profile_map","description":"Delayed-mode trajectories"}""",
+        "ai:group": "Data Access > wms"
+      },
+      {
+        "href": "http://geoserver-123.aodn.org.au/geoserver/ows",
+        "rel": "wfs",
+        "type": "",
+        "title": """{"title":"aatams_sattag_dm_profile_data","description":"This OGC WFS service returns filtered geographic information. The returned data (CTD profile) is available in multiple formats including CSV."}""",
+        "ai:group": "Data Access > wfs"
+      },
+      {
+        "href": "http://geoserver-123.aodn.org.au/geoserver/ows",
+        "rel": "wfs",
+        "type": "",
+        "title": """{"title":"aatams_sattag_dm_location_data","description":"This OGC WFS service returns filtered geographic information. The returned data (Argos locations) is available in multiple formats including CSV."}""",
+        "ai:group": "Data Access > wfs"
+      },
+      {
+        "href": "http://geoserver-123.aodn.org.au/geoserver/ows",
+        "rel": "wfs",
+        "type": "",
+        "title": """{"title":"aatams_sattag_dm_dive_profile_data","description":"This OGC WFS service returns filtered geographic information. The returned data (Dive profiles) is available in multiple formats including CSV."}""",
+        "ai:group": "Data Access > wfs"
+      },
+      {
+        "href": "http://geoserver-123.aodn.org.au/geoserver/ows",
+        "rel": "wfs",
+        "type": "",
+        "title": """{"title":"aatams_sattag_dm_haulout_data","description":"This OGC WFS service returns filtered geographic information. The returned data (Haulout) is available in multiple formats including CSV."}""",
+        "ai:group": "Data Access > wfs"
+      },
+      {
+        "href": "http://geoserver-123.aodn.org.au/geoserver/ows",
+        "rel": "wfs",
+        "type": "",
+        "title": """{"title":"aatams_sattag_dm_summary_data","description":"This OGC WFS service returns filtered geographic information. The returned data (Summary statistics) is available in multiple formats including CSV."}""",
+        "ai:group": "Data Access > wfs"
+      },
+      {
+        "href": "https://help.aodn.org.au/web-services/ogc-wfs/",
+        "rel": "related",
+        "type": "text/html",
+        "title": """{"title":"OGC WFS help documentation","description":""}""",
+        "ai:group": "Document"
+      },
+      {
+        "href": "https://content.aodn.org.au/Documents/IMOS/Facilities/animal_tracking/IMOS_Animal_Tracking_Best_Practice_Manual_for_SMRU_CTD_Satellite_Relay_Data_Loggers_LATEST.pdf",
+        "rel": "related",
+        "type": "text/html",
+        "title": """{"title":"Best Practice Manual for SMRU CTD Satellite Relay Data Loggers","description":""}""",
+        "ai:group": "Document"
+      },
+      {
+        "href": "https://geonetwork.edge.aodn.org.au:443/geonetwork/images/logos/9d6eab2a-f6e5-4110-9014-d0de61f4b6c0.png",
+        "rel": "icon",
+        "type": "image/png",
+        "title": "Suggest icon for dataset"
+      },
+      {
+        "href": "https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/06b09398-d3d0-47dc-a54a-a745319fbece",
+        "rel": "describedby",
+        "type": "text/html",
+        "title": "Full metadata link"
+      },
+      {
+        "href": "https://licensebuttons.net/l/by/4.0/88x31.png",
+        "rel": "license",
+        "type": "image/png"
+      },
+      {
+        "href": "http://creativecommons.org/licenses/by/4.0/",
+        "rel": "license",
+        "type": "text/html"
+      },
+      {
+        "href": "uuid:4637bd9b-8fba-4a10-bf23-26a511e17042",
+        "rel": "parent",
+        "type": "application/json",
+        "title": """{"title":"IMOS - Animal Tracking Facility Satellite Relay Tagging Program","recordAbstract":"The Animal Tracking Facility (formerly known as the Australian Animal Tracking And Monitoring System (AATAMS)) is a coordinated marine animal tagging project. \n\nSatellite Relay Data Loggers (SRDL) (most with CTDs, and some also with fluorometers) are used to explore how marine mammal behaviour relates to their oceanic environment. Loggers developed at the University of St Andrews Sea Mammal Research Unit transmit data in near real time via the Argo satellite system.\n\nThe Satellite Relay Data Loggers are deployed on marine mammals, including Elephant Seals, Weddell Seals, Australian Fur Seals, Australian Sea Lions, New Zealand Fur Seals. Data parameters measured by the instruments include time, conductivity (salinity), temperature, speed, fluorescence (available in the future) and depth.\n\nData is being collected in the Southern Ocean, the Great Australian Bight, and off the South-East Coast of Australia."}"""
+      },
+      {
+        "href": "uuid:70f148b1-7040-4fad-944a-456413c95472",
+        "rel": "sibling",
+        "type": "application/json",
+        "title": """{"title":"IMOS - Animal Tracking Facility - Satellite Relay Tagging Program - Delayed mode data with quality-controlled locations","recordAbstract":"The Animal Tagging Sub-Facility of the IMOS Animal Tracking Facility (formerly known as the Australian Animal Tracking And Monitoring System (AATAMS)) is a coordinated marine animal satellite-tracking project. Satellite Relay Data Loggers (SRDL) (most with Conductivity-Temperature-Depth (CTD) sensors, and some with CTD/fluorometers) are used to explore how marine animals (e.g. mammals) interact with their oceanic environment. The primary focus of this program is to collect CTD data from marine mammals, such as southern elephant seals (Mirounga leonina) and Weddell seals (Leptonychotes weddellii), in the southern Indian Ocean and along the East Antarctic coast. This is achieved through international collaborations with the French national polar program's long-term National Observatory Services: Mammals as Ocean Bio-Samplers (SNO-MEMO), the National Institute of Water and Atmospheric Research as part of the Ross Sea Research and Monitoring Programme, and the CNES (Centre National d'Etudes Spatiales) TOSCA programme (Phoques de Weddell bio-oceanographes de la banquise antarctique et outils satellites) in Terre Adelie. SRDL loggers developed at the Sea Mammal Research Unit (SMRU, University of St Andrews, UK) transmit data in near real time via the Argos satellite system. \n\nBetween January 2022 and June 2024, a pilot study co-funded by the Royal Australian Navy in collaboration with the Australian Institute of Marine Science and Indigenous Ranger groups was initiated to determine whether conductivity-temperature-depth instruments mounted on turtles could provide essential observations spatially and vertically in the seas of Northern Australia. \n\nThis metadata record, represents several different datasets listed hereafter, which can all be accessed through a multi-WFS service. \nThe data represented by this record are presented in delayed mode. \nCTD - parameters measured by the instruments include time, depth, conductivity (salinity), temperature, speed and fluorescence (available in some deployments). \nDiving - parameters measured by the instruments include individual dive start and end time, longitude/latitude at dive end time, post-dive surface duration, dive duration, maximum dive depth, intermediate dive depths and times. \nHaulout - a haulout begins when the SRDL has been continuously dry for a specified length of time (usually 10 minutes). It ends when continuously wet for another interval (usually 40 seconds). Haulout data parameters measured by the instruments include haulout start and end dates and longitude/latitude, and haulout number. \nArgos Locations - location data parameters measured by the instruments include time, longitude, latitude, location quality, along with other diagnostic information provided by Argos (http: //www.argos-system.org/). \nSummary Statistics - as well as sending records of individual events such as dives and haulouts, the SRDL also calculates summary statistics of those events over a specified time period (usually 3, 4 or 6 hours). Summary statistics computed by the instruments include the proportion of time spent diving, at the surface and hauled-out, the number of dives, and the average, standard deviation and maximum dive duration and dive depth during each summary period. These statistics are based on all the data recorded by the SRDL and thus are not prone to distortion by variations in the efficiency of transmission via Argos. \nSSM QC Locations - SSM-predicted locations and uncertainty at 6-h intervals from the location quality-control process. SSM-predicted locations are also appended to records in the CTD, Diving, Haulout, Argos Locations, and Summary Statistics datasets. See Jonsen et al. 2020 for further details on the SSM used for location quality control.\n\n** For data prior to October 2018, please consult IMOS - Animal Tracking Facility - Satellite Relay Tagging Program - Delayed mode data (https://catalogue-imos.aodn.org.au:443/geonetwork/srv/api/records/06b09398-d3d0-47dc-a54a-a745319fbece), to access data without improved satellite locations. In the near future all historical delayed mode data will be reprocessed with the new quality control (QC) process, to improve the accuracy of the satellite location data, and this dataset will replace the original one. **"}"""
+      },
+      {
+        "href": "uuid:b2548767-514f-4a31-b65e-36bb894382d5",
+        "rel": "sibling",
+        "type": "application/json",
+        "title": """{"title":"IMOS - Animal Tracking Facility - Satellite Relay Tagging Program - Near real-time data with quality-controlled locations","recordAbstract":"The Animal Tagging Sub-Facility of the IMOS Animal Tracking Facility (formerly known as the Australian Animal Tracking And Monitoring System (AATAMS)) is a coordinated marine animal satellite-tracking project. Satellite Relay Data Loggers (SRDL) (most with Conductivity-Temperature-Depth (CTD) sensors, and some with CTD/fluorometers) are used to explore how marine animals (e.g. mammals) interact with their oceanic environment. The primary focus of this program is to collect CTD data from marine mammals, such as southern elephant seals (Mirounga leonina) and Weddell seals (Leptonychotes weddellii), in the southern Indian Ocean and along the East Antarctic coast. This is achieved through international collaborations with the French national polar program's long-term National Observatory Services: Mammals as Ocean Bio-Samplers (SNO-MEMO), the National Institute of Water and Atmospheric Research as part of the Ross Sea Research and Monitoring Programme, and the CNES (Centre National d'Etudes Spatiales) TOSCA programme (Phoques de Weddell bio-oceanographes de la banquise antarctique et outils satellites) in Terre Adelie. SRDL loggers developed at the Sea Mammal Research Unit (SMRU, University of St Andrews, UK) transmit data in near real time via the Argos satellite system. This metadata record, represents several different datasets listed hereafter, which can all be accessed through a multi-WFS service. \nThe data represented by this record are presented in near real-time. \nCTD - parameters measured by the instruments include time, depth, conductivity (salinity), temperature, speed and fluorescence (available in some deployments). \nDiving - parameters measured by the instruments include individual dive start and end time, longitude/latitude at dive end time, post-dive surface duration, dive duration, maximum dive depth, intermediate dive depths and times. \nHaulout - a haulout begins when the SRDL has been continuously dry for a specified length of time (usually 10 minutes). It ends when continuously wet for another interval (usually 40 seconds). Haulout data parameters measured by the instruments include haulout start and end dates and longitude/latitude, and haulout number. \nArgos Locations - location data parameters measured by the instruments include time, longitude, latitude, location quality, along with other diagnostic information provided by Argos (http: //www.argos-system.org/). \nSummary Statistics - as well as sending records of individual events such as dives and haulouts, the SRDL also calculates summary statistics of those events over a specified time period (usually 3, 4 or 6 hours). Summary statistics computed by the instruments include the proportion of time spent diving, at the surface and hauled-out, the number of dives, and the average, standard deviation and maximum dive duration and dive depth during each summary period. These statistics are based on all the data recorded by the SRDL and thus are not prone to distortion by variations in the efficiency of transmission via Argos. \nSSM QC Locations - SSM-predicted locations and uncertainty at 6-h intervals from the location quality-control process. SSM-predicted locations are also appended to records in the CTD, Diving, Haulout, Argos Locations, and Summary Statistics datasets. See Jonsen et al. 2020 for further details on the SSM used for location quality control"}"""
+      }
+    ],
+    "license": "Creative Commons Attribution 4.0 International License",
+    "providers": [
+      {
+        "name": "Integrated Marine Observing System (IMOS)",
+        "roles": [
+          "distributor"
+        ],
+        "url": "http://imos.org.au/aodn.html"
+      }
+    ],
+    "themes": [
+      {
+        "concepts": [
+          {
+            "id": "Oceans | Ocean Temperature | Water Temperature",
+            "title": "NASA/Global Change Master Directory Earth Science Keywords Version 5.3.8",
+            "description": "GCMD"
+          },
+          {
+            "id": "Oceans | Salinity/density | Conductivity",
+            "title": "NASA/Global Change Master Directory Earth Science Keywords Version 5.3.8",
+            "description": "GCMD"
+          },
+          {
+            "id": "Oceans | Marine Biology | Marine Mammals",
+            "title": "NASA/Global Change Master Directory Earth Science Keywords Version 5.3.8",
+            "description": "GCMD"
+          },
+          {
+            "id": "Oceans | Marine Biology | Marine Birds",
+            "title": "NASA/Global Change Master Directory Earth Science Keywords Version 5.3.8",
+            "description": "GCMD"
+          }
+        ],
+        "scheme": ""
+      },
+      {
+        "concepts": [
+          {
+            "id": "Satellite Tag",
+            "title": "IMOS Keywords Thesaurus",
+            "description": "IMOS"
+          },
+          {
+            "id": "CTD Satellite Relay Data Logger",
+            "title": "IMOS Keywords Thesaurus",
+            "description": "IMOS"
+          },
+          {
+            "id": "Agency | SMRU | Sea Mammal Research Unit",
+            "title": "IMOS Keywords Thesaurus",
+            "description": "IMOS"
+          }
+        ],
+        "scheme": ""
+      },
+      {
+        "concepts": [
+          {
+            "id": "Tags and Tracking Devices",
+            "title": "Marine Community Profile of ISO19115 v1.4 Collection Methods Vocabulary (Annex C.1.3)",
+            "description": ""
+          }
+        ],
+        "scheme": "theme"
+      },
+      {
+        "concepts": [
+          {
+            "id": "Global / Oceans | Atlantic Ocean",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Global / Oceans | Southern Ocean",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Marine Features (Australia) | Bass Strait, TAS/VIC",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Global / Oceans | Indian Ocean",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Regional Seas | Coral Sea",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Global / Oceans | Pacific Ocean",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Marine Features (Australia) | Great Australian Bight, SA/WA",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Regional Seas | Tasman Sea",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          }
+        ],
+        "scheme": "place"
+      },
+      {
+        "concepts": [
+          {
+            "id": "Continents | Antarctica",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "States, Territories (Australia) | Victoria",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Countries | New Zealand",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Offshore Islands (Australia) | Heard & McDonald Islands",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "States, Territories (Australia) | South Australia",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Countries | Australia",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "States, Territories (Australia) | Tasmania",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "States, Territories (Australia) | New South Wales",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Offshore Islands (Australia) | Macquarie Island",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "States, Territories (Australia) | Western Australia",
+            "title": "AODN Geographic Extents Vocabulary",
+            "description": ""
+          }
+        ],
+        "scheme": "place"
+      },
+      {
+        "concepts": [
+          {
+            "id": "land-sea mammals",
+            "url": "http://vocab.nerc.ac.uk/collection/L06/current/77",
+            "title": "AODN Platform Vocabulary",
+            "description": ""
+          }
+        ],
+        "scheme": "theme"
+      },
+      {
+        "concepts": [
+          {
+            "id": "Temperature of the water body",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/TEMPPR01",
+            "title": "AODN Discovery Parameter Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Practical salinity of the water body",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/PSLTZZ01",
+            "title": "AODN Discovery Parameter Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Pressure (measured variable) in the water body exerted by overlying sea water and any medium above it",
+            "url": "http://vocab.aodn.org.au/def/discovery_parameter/entity/565",
+            "title": "AODN Discovery Parameter Vocabulary",
+            "description": ""
+          }
+        ],
+        "scheme": "theme"
+      },
+      {
+        "concepts": [
+          {
+            "id": "Latitude north",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/ALATZZ01",
+            "title": "AODN Sampling Parameter Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "Longitude east",
+            "url": "http://vocab.nerc.ac.uk/collection/P01/current/ALONZZ01",
+            "title": "AODN Sampling Parameter Vocabulary",
+            "description": ""
+          }
+        ],
+        "scheme": "theme"
+      },
+      {
+        "concepts": [
+          {
+            "id": "water temperature sensor",
+            "url": "http://vocab.nerc.ac.uk/collection/L05/current/134",
+            "title": "AODN Instrument Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "CTD",
+            "url": "http://vocab.nerc.ac.uk/collection/L05/current/130",
+            "title": "AODN Instrument Vocabulary",
+            "description": ""
+          },
+          {
+            "id": "SMRU Ltd Satellite Relay Data Logger 9000x",
+            "url": "http://vocab.nerc.ac.uk/collection/L22/current/TOOL0719",
+            "title": "AODN Instrument Vocabulary",
+            "description": ""
+          }
+        ],
+        "scheme": "theme"
+      },
+      {
+        "concepts": [
+          {
+            "id": "Animal Tagging Sub-Facility, Integrated Marine Observing System (IMOS)",
+            "url": "http://vocab.aodn.org.au/def/organisation/entity/497",
+            "title": "AODN Organisation Vocabulary",
+            "description": ""
+          }
+        ],
+        "scheme": "discipline"
+      },
+      {
+        "concepts": [
+          {
+            "id": "oceans"
+          }
+        ],
+        "scheme": "Categories"
+      }
+    ],
+    "id": "06b09398-d3d0-47dc-a54a-a745319fbece",
+    "search_suggestions": {
+      "abstract_phrases": [
+        "tagging program delayed",
+        "been",
+        "mode data",
+        "depth diving parameters measured",
+        "mammals including elephant",
+        "accuracy",
+        "longitude latitude",
+        "also calculates summary",
+        "via",
+        "srdl also",
+        "begins",
+        "during each summary period",
+        "satellite location data",
+        "monitoring system",
+        "satellite relay data loggers",
+        "locations location",
+        "dive post dive surface",
+        "record",
+        "oceanic",
+        "historical delayed mode data",
+        "near",
+        "diagnostic",
+        "maximum dive",
+        "summary statistics",
+        "quality control",
+        "time via",
+        "marine mammal behaviour relates",
+        "how marine mammal",
+        "animal tagging project",
+        "zealand fur seals data",
+        "speed fluorescence available",
+        "relay data loggers",
+        "imos animal tracking",
+        "intermediate",
+        "information provided",
+        "dive depth",
+        "instruments include time longitude",
+        "delayed mode ctd",
+        "begins when",
+        "southern",
+        "average",
+        "historical delayed mode",
+        "metadata record",
+        "metadata record represents",
+        "longitude latitude location quality",
+        "seals australian",
+        "datasets",
+        "sea",
+        "duration maximum dive",
+        "delayed mode ctd parameters",
+        "how",
+        "other diagnostic",
+        "near future",
+        "variations",
+        "andrews sea",
+        "monitoring system aatams",
+        "tagging program",
+        "after",
+        "improved satellite locations",
+        "record represents",
+        "location data",
+        "post dive surface duration",
+        "mode ctd parameters measured",
+        "metadata record represents several",
+        "relay tagging program",
+        "salinity temperature speed",
+        "location quality along",
+        "maximum",
+        "information",
+        "ends when continuously",
+        "data parameters",
+        "new quality",
+        "haulout number argos locations",
+        "also calculates summary statistics",
+        "australian sea lions",
+        "standard",
+        "several different datasets listed",
+        "loggers",
+        "loggers srdl most",
+        "historical",
+        "facility formerly",
+        "developed",
+        "weddell seals",
+        "depth during each",
+        "transmission",
+        "elephant seals weddell",
+        "post",
+        "dive surface duration",
+        "seals",
+        "project satellite relay",
+        "quality control qc process",
+        "project satellite relay data",
+        "argo satellite",
+        "which",
+        "been continuously dry",
+        "please consult imos animal",
+        "mode ctd parameters",
+        "time period usually",
+        "elephant seals",
+        "sea lions new",
+        "argos locations location",
+        "geonetwork",
+        "program delayed",
+        "data parameters measured",
+        "all historical",
+        "haulouts",
+        "http",
+        "tracking facility formerly",
+        "seals australian sea",
+        "elephant",
+        "haulout data parameters measured",
+        "standard deviation",
+        "delayed mode data",
+        "some",
+        "relates",
+        "delayed mode",
+        "provided",
+        "seals weddell seals",
+        "average standard deviation",
+        "duration",
+        "explore how",
+        "been continuously",
+        "lions new zealand fur",
+        "end",
+        "satellite",
+        "time spent diving",
+        "marine mammal",
+        "calculates summary statistics",
+        "control qc process",
+        "over",
+        "mode ctd",
+        "new quality control qc",
+        "summary statistics computed",
+        "haulout number argos",
+        "relay",
+        "marine mammals",
+        "including elephant seals",
+        "length",
+        "seconds haulout data",
+        "data after october",
+        "seals data",
+        "recorded",
+        "ctds",
+        "tagging project",
+        "environment",
+        "srv api",
+        "argo",
+        "has been continuously",
+        "facility satellite relay tagging",
+        "dive surface duration dive",
+        "service",
+        "well",
+        "individual dive post",
+        "end dates",
+        "tracking facility satellite",
+        "duration maximum dive depth",
+        "argos locations location data",
+        "dive duration",
+        "zealand fur",
+        "data represented",
+        "instruments include haulout start",
+        "mammal behaviour relates",
+        "delayed",
+        "accessed",
+        "tracking",
+        "location quality",
+        "seals australian sea lions",
+        "east coast",
+        "include time longitude",
+        "improved",
+        "number",
+        "diving",
+        "has been",
+        "weddell seals australian",
+        "usually",
+        "https",
+        "period",
+        "surface",
+        "hauled out",
+        "geonetwork srv",
+        "ends when continuously wet",
+        "program delayed mode",
+        "being",
+        "srdl has been continuously",
+        "system",
+        "research unit transmit",
+        "elephant seals weddell seals",
+        "average standard",
+        "interval",
+        "controlled locations https",
+        "other",
+        "sea mammal research unit",
+        "seals australian fur seals",
+        "diving parameters",
+        "proportion",
+        "depth intermediate",
+        "dives",
+        "please consult",
+        "new zealand fur seals",
+        "known",
+        "sending",
+        "time conductivity salinity",
+        "satellite relay tagging program",
+        "each individual",
+        "duration dive duration maximum",
+        "diagnostic information",
+        "salinity temperature speed fluorescence",
+        "dive duration maximum",
+        "instruments include time",
+        "off",
+        "srdl has been",
+        "locations https",
+        "animal tagging project satellite",
+        "include haulout",
+        "future",
+        "explore how marine",
+        "relay data",
+        "fur",
+        "coordinated marine",
+        "seals weddell",
+        "locations location data",
+        "several",
+        "satellite relay tagging",
+        "seals weddell seals australian",
+        "tagging program delayed mode",
+        "behaviour relates",
+        "marine animal tagging",
+        "st andrews sea mammal",
+        "mode",
+        "end time",
+        "system aatams",
+        "record represents several",
+        "fluorescence",
+        "intermediate dive",
+        "instruments include start",
+        "controlled locations https catalogue",
+        "relay data loggers srdl",
+        "near real time via",
+        "depth intermediate dive depths",
+        "different",
+        "transmission via",
+        "longitude",
+        "data loggers",
+        "all",
+        "temperature speed",
+        "oceanic environment loggers developed",
+        "new",
+        "including",
+        "tagging project satellite relay",
+        "other diagnostic information",
+        "australian fur seals australian",
+        "dry",
+        "real",
+        "hours summary statistics computed",
+        "animal tagging",
+        "sea mammal research",
+        "unit",
+        "new quality control",
+        "improve",
+        "dive depth intermediate",
+        "october",
+        "transmit data",
+        "dive depths",
+        "data recorded",
+        "api records",
+        "period usually",
+        "formerly known",
+        "facility satellite relay",
+        "haulout begins when",
+        "argos http",
+        "university",
+        "real time via",
+        "dive post",
+        "animal tracking facility formerly",
+        "new zealand",
+        "represents",
+        "times",
+        "continuously wet",
+        "datasets listed hereafter which",
+        "relay tagging",
+        "each summary",
+        "please consult imos",
+        "haulout start",
+        "dive",
+        "geonetwork srv api",
+        "weddell seals australian fur",
+        "during each",
+        "oceanic environment loggers",
+        "duration dive",
+        "haulout data parameters",
+        "locations location data parameters",
+        "data after",
+        "srv api records",
+        "animal tracking",
+        "srdl most",
+        "tagging project satellite",
+        "mammals including elephant seals",
+        "fur seals",
+        "deviation",
+        "control",
+        "different datasets listed",
+        "srdl also calculates summary",
+        "calculates",
+        "different datasets",
+        "lions",
+        "lions new zealand",
+        "number argos",
+        "srv",
+        "australian animal",
+        "listed hereafter which can",
+        "can all",
+        "formerly",
+        "unit transmit",
+        "represents several",
+        "another interval",
+        "metadata",
+        "time longitude latitude location",
+        "diagnostic information provided",
+        "satellite relay data",
+        "depth diving",
+        "diving parameters measured",
+        "quality controlled locations",
+        "multi wfs service",
+        "interval usually",
+        "andrews",
+        "time period",
+        "access data",
+        "ctd",
+        "qc",
+        "how marine",
+        "spent diving",
+        "mammal research",
+        "haulout begins",
+        "https catalogue",
+        "zealand",
+        "represented",
+        "individual dive post dive",
+        "api",
+        "oceanic environment",
+        "events",
+        "south east",
+        "based",
+        "australian sea lions new",
+        "great australian",
+        "facility satellite",
+        "consult imos animal tracking",
+        "australian fur seals",
+        "australia",
+        "dive depth intermediate dive",
+        "monitoring",
+        "south east coast",
+        "another interval usually",
+        "each",
+        "argo satellite system",
+        "quality",
+        "sending records",
+        "coordinated marine animal",
+        "temperature speed fluorescence",
+        "near real time",
+        "represents several different datasets",
+        "future all",
+        "fur seals australian sea",
+        "fluorometers",
+        "animal",
+        "imos",
+        "fluorescence available",
+        "include time longitude latitude",
+        "satellite location",
+        "data loggers srdl most",
+        "access",
+        "how marine mammal behaviour",
+        "latitude",
+        "another",
+        "control qc",
+        "sea lions",
+        "mammal research unit transmit",
+        "latitude location quality",
+        "marine",
+        "transmission via argos",
+        "haulout",
+        "speed fluorescence",
+        "all historical delayed",
+        "include time conductivity",
+        "australian animal tracking",
+        "statistics computed",
+        "temperature",
+        "marine mammal behaviour",
+        "australian fur",
+        "several different datasets",
+        "so",
+        "include start",
+        "tracking facility",
+        "geonetwork srv api records",
+        "st",
+        "via argos",
+        "southern ocean",
+        "has been continuously dry",
+        "time longitude",
+        "imos animal",
+        "one",
+        "instruments include time conductivity",
+        "time spent",
+        "replaced",
+        "andrews sea mammal",
+        "marine animal tagging project",
+        "near real",
+        "time conductivity salinity temperature",
+        "controlled",
+        "conductivity salinity temperature",
+        "depth during",
+        "time usually",
+        "depths",
+        "satellite locations",
+        "imos animal tracking facility",
+        "parameters measured",
+        "dataset",
+        "coordinated",
+        "through",
+        "number argos locations",
+        "mammals including",
+        "available",
+        "project",
+        "ends when",
+        "research",
+        "future all historical delayed",
+        "specified time",
+        "also calculates",
+        "summary period",
+        "accessed through",
+        "post dive",
+        "has",
+        "those",
+        "wfs service",
+        "when continuously wet",
+        "ctd parameters measured",
+        "those events over",
+        "please",
+        "conductivity salinity",
+        "catalogue",
+        "near future all",
+        "new zealand fur",
+        "calculates summary",
+        "ocean",
+        "each summary period",
+        "including elephant seals weddell",
+        "parameters",
+        "post dive surface",
+        "improved satellite",
+        "some also",
+        "records",
+        "quality control qc",
+        "fur seals australian",
+        "maximum dive duration",
+        "animal tracking facility",
+        "speed",
+        "dive duration maximum dive",
+        "hours summary statistics",
+        "all historical delayed mode",
+        "mammal",
+        "instruments include haulout",
+        "instruments include",
+        "include time",
+        "ends",
+        "intermediate dive depths",
+        "longitude latitude location",
+        "andrews sea mammal research",
+        "datasets listed",
+        "summary",
+        "hours",
+        "transmit",
+        "start",
+        "hauled",
+        "salinity temperature",
+        "tracking facility satellite relay",
+        "quality controlled",
+        "sea mammal",
+        "conductivity salinity temperature speed",
+        "great australian bight",
+        "qc process",
+        "environment loggers",
+        "location",
+        "time",
+        "include haulout start",
+        "controlled locations",
+        "tagging",
+        "measured",
+        "animal tracking facility satellite",
+        "mammal behaviour",
+        "srdl also calculates",
+        "collected",
+        "tracking facility formerly known",
+        "during",
+        "program",
+        "when",
+        "times haulout",
+        "multi",
+        "australian sea",
+        "seconds haulout",
+        "srdl",
+        "seconds",
+        "instruments",
+        "weddell",
+        "haulout number",
+        "represents several different",
+        "environment loggers developed",
+        "st andrews sea",
+        "marine mammals including",
+        "duration maximum",
+        "efficiency",
+        "when continuously",
+        "future all historical",
+        "events over",
+        "st andrews",
+        "dates",
+        "including elephant",
+        "being collected",
+        "those events",
+        "hours summary",
+        "coast",
+        "depth during each summary",
+        "mammals",
+        "time conductivity",
+        "relay tagging program delayed",
+        "argos",
+        "explore how marine mammal",
+        "research unit",
+        "unit transmit data",
+        "dive surface",
+        "which can",
+        "specified time period",
+        "computed",
+        "south",
+        "seals australian fur",
+        "quality along",
+        "australian",
+        "depth diving parameters",
+        "program delayed mode data",
+        "maximum dive depth intermediate",
+        "argos locations",
+        "specified",
+        "dive depth during each",
+        "out",
+        "surface duration dive",
+        "location data parameters",
+        "coordinated marine animal tagging",
+        "specified time period usually",
+        "consult",
+        "hereafter which",
+        "ctd parameters",
+        "include",
+        "several different",
+        "explore",
+        "listed hereafter",
+        "wet",
+        "consult imos animal",
+        "dive depth during",
+        "individual events",
+        "continuously",
+        "great",
+        "other diagnostic information provided",
+        "listed hereafter which",
+        "hereafter which can all",
+        "depth",
+        "srdl has",
+        "behaviour",
+        "prone",
+        "hereafter which can",
+        "facility",
+        "statistics",
+        "sea lions new zealand",
+        "include time conductivity salinity",
+        "each individual dive post",
+        "data",
+        "wfs",
+        "maximum dive depth",
+        "loggers srdl",
+        "location data parameters measured",
+        "used",
+        "haulout data",
+        "different datasets listed hereafter",
+        "satellite system",
+        "australian bight",
+        "conductivity",
+        "presented",
+        "continuously dry",
+        "bight",
+        "depth intermediate dive",
+        "after october",
+        "datasets listed hereafter",
+        "time longitude latitude",
+        "mammal research unit",
+        "fur seals data",
+        "individual",
+        "consult imos",
+        "project satellite",
+        "minutes",
+        "marine mammals including elephant",
+        "which can all",
+        "seconds haulout data parameters",
+        "locations https catalogue",
+        "most",
+        "duration dive duration",
+        "distortion",
+        "marine animal",
+        "specified length",
+        "data loggers srdl",
+        "dive post dive",
+        "deployed",
+        "can",
+        "east",
+        "along",
+        "research unit transmit data",
+        "facility formerly known",
+        "zealand fur seals",
+        "surface duration dive duration",
+        "real time",
+        "aatams",
+        "quality controlled locations https",
+        "salinity",
+        "number argos locations location",
+        "process",
+        "individual dive",
+        "hereafter",
+        "latitude location",
+        "spent",
+        "satellite relay",
+        "also",
+        "loggers developed",
+        "multi wfs",
+        "reprocessed",
+        "each individual dive",
+        "lions new",
+        "during each summary",
+        "listed",
+        "surface duration",
+        "latitude location quality along",
+        "record represents several different",
+        "near future all historical",
+        "historical delayed",
+        "temperature speed fluorescence available",
+        "locations"
+      ],
+      "parameter_vocabs_sayt": [
+        "salinity",
+        "temperature",
+        "water pressure"
+      ],
+      "platform_vocabs_sayt": [
+        "Biological platform",
+        "land-sea mammals"
+      ],
+      "organisation_vocabs_sayt": [
+        "Animal Tagging Sub-Facility, Integrated Marine Observing System (IMOS)"
+      ]
+    },
+    "sci:citation": """{"suggestedCitation":"The citation in a list of references is: \"IMOS [year-of-data-download], [Title], [data-access-URL], accessed [date-of-access].\"",
+    "useLimitations": [
+      "Data, products and services from IMOS are provided \"as is\" without any warranty as to fitness for a particular purpose."
+    ],
+    "otherConstraints": [
+      "Any users of IMOS data are required to clearly acknowledge the source of the material derived from IMOS in the format: \"Data was sourced from Australia's Integrated Marine Observing System (IMOS) – IMOS is enabled by the National Collaborative Research Infrastructure strategy (NCRIS).\" If relevant, also credit other organisations involved in collection of this particular datastream (as listed in 'credit' in the metadata record)."
+    ]
+  }""","type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v0.1.1/schema.json",
+    "https://stac-extensions.github.io/projection/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/language/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/themes/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.2.0/schema.json"
+  ]
+}
+}
