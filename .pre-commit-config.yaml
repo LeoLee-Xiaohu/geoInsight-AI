@@ -1,0 +1,57 @@
+# Pre-commit hooks for AI Project Board
+#
+# Install:  pre-commit install
+# Run once: pre-commit run --all-files
+
+repos:
+  # ─────────────────────────────────────────────
+  # General file hygiene
+  # ─────────────────────────────────────────────
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ["--maxkb=500"]
+      - id: detect-private-key        # Block accidental API key commits
+
+  # ─────────────────────────────────────────────
+  # Python
+  # ─────────────────────────────────────────────
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+        files: ^(src|tests)/
+      - id: ruff-format
+        files: ^(src|tests)/
+
+  # ─────────────────────────────────────────────
+  # Spell checking
+  # ─────────────────────────────────────────────
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        args:
+          - --write-changes         # auto-fix typos
+          - --ignore-words-list=nd,ths,whe,rouge,assertIn
+        exclude: |
+          (?x)^(
+            .*\.lock |
+            .*uv\.lock
+          )$
+
+  # ─────────────────────────────────────────────
+  # Secrets detection (extra safety net)
+  # ─────────────────────────────────────────────
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.2
+    hooks:
+      - id: gitleaks
