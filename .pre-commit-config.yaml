@@ -3,6 +3,8 @@
 # Install:  pre-commit install
 # Run once: pre-commit run --all-files
 
+exclude: '^data/'
+
 repos:
   # ─────────────────────────────────────────────
   # General file hygiene
