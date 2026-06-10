@@ -132,7 +132,34 @@ Option to ask follow-up questions (e.g., “Compare with previous month?”)
 
 IMOS GeoInsight AI Agents Workflow 
 
-LangGraph Orchestration Flow-2026-03-16-003251.png
+```mermaid
+graph LR
+    User([User])
+    ChatApp([Chat box app])
+    GuardRail[GuardRail]
+
+    subgraph LangGraph [LangGraph Orchestration]
+        Agent([GeoInsight Supervisor Agent])
+        Parquet([Parquet Process Agent])
+        Zarr([Zarr Process Agent])
+        Vis([Visualization Agent])
+
+        Agent --> Parquet
+        Agent --> Zarr
+        Parquet --> Vis
+        Zarr --> Vis
+    end
+
+    KB[(IMOS Knowledge Base)]
+
+    User -- Qs --> ChatApp
+    ChatApp -- Answer --> User
+    ChatApp <--> GuardRail
+    GuardRail <--> Agent
+    Agent <--> KB
+    Vis -- Data Visualization ---> User
+```
+
 GeoInsight AI Agents Workflow 
  
 
