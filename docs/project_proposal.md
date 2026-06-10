@@ -128,9 +128,9 @@ Visualization + explanation (e.g., average temp rose 1.2°C)
 
 Option to ask follow-up questions (e.g., “Compare with previous month?”)
 
- 
 
-IMOS GeoInsight AI Agents Workflow 
+
+IMOS GeoInsight AI Agents Workflow
 
 ```mermaid
 graph LR
@@ -160,10 +160,10 @@ graph LR
     Vis -- Data Visualization ---> User
 ```
 
-GeoInsight AI Agents Workflow 
- 
+GeoInsight AI Agents Workflow
 
- 
+
+
 
 7. Milestones & Timeline
 Phase
@@ -228,7 +228,7 @@ Productionize the first IMOS Data Visualization AI agent
 
 Total Estimated Time
 
- 
+
 
 9–11 weeks
 

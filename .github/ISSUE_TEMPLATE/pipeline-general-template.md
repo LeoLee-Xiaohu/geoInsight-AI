@@ -7,10 +7,10 @@
 **SO THAT** some reason
 
 ## Acceptance Criteria
-1. 
+1.
 
 ## Notes
-1. 
+1.
 
 ## Tasks
 - [ ] ...
