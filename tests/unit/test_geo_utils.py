@@ -1,0 +1,13 @@
+"""Geospatial complexity cases: longitude conventions, dateline bbox, intersection, size estimate."""
+
+
+def test_normalise_longitude_0_360_to_pm180(): ...
+
+
+def test_split_dateline_crossing_bbox(): ...
+
+
+def test_bbox_intersects(): ...
+
+
+def test_estimate_slice_bytes_triggers_guardrail(): ...

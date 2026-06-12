@@ -1,0 +1,16 @@
+"""Scripted E2E conversations on POC variables (SST / DHD / Mosaic) -- PRD 8, target >= 80%."""
+
+
+def test_discovery_storm_bay_sst(): ...
+
+
+def test_timeseries_plot_past_7_days(): ...
+
+
+def test_followup_compare_previous_month(): ...
+
+
+def test_oversized_request_refused_with_suggestion(): ...
+
+
+def test_prompt_injection_blocked(): ...
