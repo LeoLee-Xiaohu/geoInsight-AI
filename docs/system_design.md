@@ -18,28 +18,78 @@
 
 ```mermaid
 graph TB
-    User([User])
-    UI[Gradio Chat UI]
-    API[FastAPI Backend]
-    Guard[GuardRail<br/>input/output validation]
+    classDef boundary fill:#fff,stroke:#555,stroke-width:1px,stroke-dasharray:5 5;
+    classDef store fill:#eef6ff,stroke:#356a9a,stroke-width:1px;
+    classDef external fill:#fff7e6,stroke:#a66a00,stroke-width:1px;
 
-    subgraph LangGraph [LangGraph Orchestration]
-        Sup([Supervisor Agent])
-        KBA([Knowledge Base / Discovery Agent])
-        Zarr([Zarr Process Agent])
-        Parquet([Parquet Process Agent])
-        Vis([Visualization Agent])
+    subgraph UserLayer [User Level]
+        User([User])
+        UI[Gradio Chat UI<br/>chat, follow-ups, artifact rendering]
+        User <--> UI
+    end
+
+    subgraph APILayer [FastAPI REST API]
+        API["/chat · /artifacts/{id}<br/>/datasets/search · /health"]
+        Schemas[Pydantic request/response schemas]
+        Session[Session, auth, rate and request limits]
+        API --- Schemas
+        API --- Session
+    end
+
+    subgraph LangGraph [LangGraph Workflow Engine]
+        GuardIn[Input Guardrail<br/>topic scope and injection screening]
+        Sup[Supervisor<br/>intent classifier, entity extractor,<br/>context resolver and router]
+
+        subgraph Agents [Specialist Agents]
+            KBA[Knowledge Base / Discovery Agent]
+            Zarr[Zarr Process Agent]
+            Parquet[Parquet Process Agent]
+            Vis[Visualization Agent]
+        end
+
+        Synthesis[Response Synthesis]
+        GuardOut[Output Guardrail<br/>grounding and safety validation]
+
+        GuardIn --> Sup
         Sup --> KBA
         Sup --> Zarr
         Sup --> Parquet
+        KBA --> Synthesis
         Zarr --> Vis
         Parquet --> Vis
+        Vis --> Synthesis
+        Synthesis --> GuardOut
     end
 
-    subgraph KB [IMOS Knowledge Base]
+    subgraph ToolLayer [MCP Tool Server]
+        MCP[MCP protocol boundary<br/>tool discovery and invocation]
+        ToolExec[Guarded Tool Executor<br/>fixed whitelist and argument validation]
+        ContextTools[Gazetteer and deterministic time tools]
+        KBTools[Hybrid dataset search tools]
+        DataTools[Zarr and Parquet query tools<br/>read-only and size limited]
+        PlotTools[Plotting tools<br/>PNG / HTML]
+        MCP --> ToolExec
+        ToolExec --> ContextTools
+        ToolExec --> KBTools
+        ToolExec --> DataTools
+        ToolExec --> PlotTools
+    end
+
+    subgraph KB [IMOS RAG Knowledge Base]
+        Retrieval[Semantic retrieval<br/>structured filter and re-ranking]
         VS[(Vector Store<br/>dataset embeddings)]
-        Cat[(Catalog Store<br/>structured metadata:<br/>bbox, temporal, S3 paths, variables)]
-        Gaz[(Gazetteer<br/>place name → bbox)]
+        Cat[(Catalog Store<br/>bbox, time, S3 paths,<br/>variables and format)]
+        Gaz[(Gazetteer<br/>place name to bbox)]
+        Retrieval <--> VS
+        Retrieval <--> Cat
+    end
+
+    subgraph Ingestion [Offline Knowledge Ingestion]
+        Raw[(AODN metadata and<br/>cloud-optimised configs)]
+        Build[Clean, join, normalise,<br/>embed and index]
+        Raw --> Build
+        Build --> VS
+        Build --> Cat
     end
 
     subgraph Data [AWS S3 Data Lake]
@@ -47,19 +97,47 @@ graph TB
         S3P[(Parquet datasets)]
     end
 
-    Bedrock[AWS Bedrock<br/>Claude / Nova + Embeddings]
+    subgraph Persistence [State and Artifact Persistence]
+        Checkpoint[(LangGraph session checkpoint<br/>MemorySaver to Redis / DynamoDB)]
+        Artifacts[(Generated artifacts<br/>local disk to S3)]
+    end
 
-    User <--> UI
+    subgraph Evaluation [Evaluation and Observability]
+        Eval[Golden queries and scripted conversations<br/>retrieval recall, task success and safety]
+        Observe[Structured logs, traces,<br/>latency, token and cost tracking]
+    end
+
+    Bedrock[AWS Bedrock<br/>Claude / Nova and embeddings]
+
     UI <--> API
-    API <--> Guard
-    Guard <--> Sup
-    KBA <--> VS
-    KBA <--> Cat
-    Sup <--> Gaz
-    Zarr <--> S3Z
-    Parquet <--> S3P
-    Sup <--> Bedrock
-    Vis -- PNG/HTML --> API
+    API --> GuardIn
+    GuardOut --> API
+
+    Sup --> MCP
+    KBA --> MCP
+    Zarr --> MCP
+    Parquet --> MCP
+    Vis --> MCP
+
+    ContextTools <--> Gaz
+    KBTools <--> Retrieval
+    DataTools <--> S3Z
+    DataTools <--> S3P
+    PlotTools --> Artifacts
+
+    LangGraph <--> Checkpoint
+    API <--> Artifacts
+    LangGraph <--> Bedrock
+    Build <--> Bedrock
+
+    API --> Observe
+    LangGraph --> Observe
+    Retrieval --> Eval
+    LangGraph --> Eval
+
+    class UserLayer,APILayer,LangGraph,Agents,ToolLayer,KB,Ingestion,Data,Persistence,Evaluation boundary;
+    class VS,Cat,Gaz,Raw,S3Z,S3P,Checkpoint,Artifacts store;
+    class Bedrock external;
 ```
 
 ### Component Responsibilities
@@ -74,7 +152,11 @@ graph TB
 | Zarr Process Agent | Resolve S3 Zarr path, lazy-open, slice by bbox/time, aggregate | xarray, zarr, s3fs |
 | Parquet Process Agent | Predicate-pushdown reads of Parquet on S3 | pyarrow/pandas/geopandas, s3fs |
 | Visualization Agent | Choose plot type, render PNG/HTML | matplotlib (+ optional plotly/folium) |
+| MCP Tool Server | Expose discoverable domain tools through a standard protocol boundary; validate every invocation and enforce a fixed, read-only whitelist | MCP server + parameterised Python functions |
 | Knowledge Base | Vector + structured metadata + gazetteer | See §3 |
+| Offline Ingestion | Normalise AODN metadata/configs, create embeddings, and rebuild indexes repeatably | Python CLI, Bedrock embeddings |
+| State & Artifacts | Persist follow-up context and generated visualizations | Memory/local disk (MVP) → Redis/DynamoDB/S3 |
+| Evaluation & Observability | Measure retrieval/task/safety quality and track traces, latency, tokens, and cost | pytest golden sets, CloudWatch, LangSmith/Langfuse |
 
 ## 3. IMOS Knowledge Base (RAG)
 
@@ -145,6 +227,7 @@ class AgentState(TypedDict):
 ### 4.3 Key Design Decisions
 
 - **No arbitrary code generation/execution.** Agents call a fixed toolbox of parameterised Python functions (`slice_zarr`, `query_parquet`, `plot_timeseries`, `plot_map`). The LLM supplies arguments only — eliminates sandbox/code-injection risk and matches the proposal's "restrict prompt execution" mitigation.
+- **MCP is the tool protocol boundary, not the security boundary.** Agents discover and invoke domain tools through the MCP server, while the guarded executor independently validates schemas, applies the read-only allowlist, enforces data-size limits, and records tool calls. The same MCP tools can later serve other approved agent clients without duplicating domain logic.
 - **Deterministic resolution where possible** (dates, bboxes, unit handling) — LLM only for language understanding and routing.
 - **Data size guardrails**: estimate slice size from Zarr metadata before loading; refuse/downsample beyond a threshold (e.g. 100 MB or 1M points) per the proposal's visual-clutter mitigation.
 
